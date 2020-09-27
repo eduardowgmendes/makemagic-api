@@ -1,0 +1,7 @@
+  applications:
+  - name: makemagic-api
+    random-route: true
+    memory: 256M
+    path: target/makemagicapi-0.0.1-SNAPSHOT.war
+    buildpack: java_buildpack
+

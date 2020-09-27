@@ -11,6 +11,7 @@
     <groupId>br.com.edu.makemagic</groupId>
     <artifactId>makemagicapi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>makemagic</name>
     <description>A Harry Potter API</description>
 
