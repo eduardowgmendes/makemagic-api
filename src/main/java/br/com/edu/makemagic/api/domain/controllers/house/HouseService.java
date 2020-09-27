@@ -42,8 +42,6 @@ public class HouseService {
         }
     }
 
-    //TODO Future save all data on DB
-
     public List<HouseDTO> getAllHouses() {
         return repository.findAll().stream().map(HouseDTO::create).collect(Collectors.toList());
     }
