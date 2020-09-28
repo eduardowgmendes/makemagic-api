@@ -5,44 +5,9 @@ Teste para uma entrevista de emprego de uma empresa de tecnologia. A tarefa era 
 
 Inteiramente concebido na linguagem Java utilizando o Spring e outras dependências como Spring Data com MySQL, Spring Cache utilizando o `Redis`. *Ao final haverá uma lista resumida de todas as tecnologias utilizadas nesse projeto.*      
 
-## Build
-
-Na primeira execução local o banco de dados estará vazio, portanto a primeira requisição ao endpoint `/api/v1/personas` retornará `204 - No Content`. Utilize o mesmo endpoint mas efetuando um `POST` para inserir qualquer personagem seguindo as orientações da seção [Operações do CRUD - Criar Personagem.](https://github.com/eduardowgmendes/makemagicapi#criar-um-personagem) 
-
-Você pode testar a API de duas formas:
-* Através do Heroku utilizando o Postman para realizar as requisições - Recomendável
-* Local via Docker seguindo as instruções da seção Docker neste documento.     
-
-### Heroku 
-
-Apenas para testes o deploy foi realizado no Heroku que é uma plataforma em nuvem como um serviço *PaaS* que suporta várias linguagens de programação. *Nota Devido à notável lentidão da plataforma é recomendável acessar os endpoints abaixo utilizando do Postman.*   
-
-| Método  |  Link  |
-| ------------------- | ------------------- |
-|  `GET`  |  `https://makemagic-api.herokuapp.com/api/v1/personas` |
-|  `GET`  |  `https://makemagic-api.herokuapp.com/api/v1/personas{id}` |
-|  `POST`  |  `https://makemagic-api.herokuapp.com/api/v1/personas` |
-|  `PUT`  |  `https://makemagic-api.herokuapp.com/api/v1/personas/{id}` |
-|  `DELETE`  |  `https://makemagic-api.herokuapp.com/api/v1/personas/{id}` |
-
-
-#### Todos os Personagens 
-[https://makemagic-api.herokuapp.com/api/v1/personas](https://makemagic-api.herokuapp.com/api/v1/personas)
-
-#### Personagem por `id` 
-[https://makemagic-api.herokuapp.com/api/v1/personas/1](https://makemagic-api.herokuapp.com/api/v1/personas)
-
-#### Documentação Swagger 
-[https://makemagic-api.herokuapp.com/swagger-ui.html](https://makemagic-api.herokuapp.com/swagger-ui.html)
-
-*Nota: O `ClearDB` do Heroku, em seu plano gratuito, incrementa os ids das entidades de 10 em 10 portanto ao testar via Heroku você notará esse comportamento, como explicado nesse link: [https://w2.cleardb.net/faqs/#general_16](https://w2.cleardb.net/faqs/#general_16)*
-
-## Docker
-Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`. 
-
-*Nota: Se houver algum problema com o MySQL na hora de subir a aplicação Spring, apenas pare a operação do Docker utilizando o `CTRL+C` duas vezes e reinicie novamente com o mesmo comando: `sudo docker up --build`.*        
-
 ## Visão Geral
+
+Aqui serão explicados informações importante acerca da API, quais foram as decisões de projeto e implementação assim como os detalhes dos requisitos solicitados e as tecnologias utilizadas. *Vá para a seção [Build](https://github.com/eduardowgmendes/makemagicapi#build) se quiser pular essa parte e testar a API.*  
 
 ### `Persona` != `Character`
 Decidi ao implementar a solução, optar por um nome de entidade diferente da recomendada pelo teste. Isso se deu ao fato de eu me familiarizar melhor com o nome **Persona** do que **Character** visto que no Java `java.lang.Character` é uma das classes Wrapper que compõem a linguagem em si. *Isso não foi um problema no geral, mas resolvi utilizar outro nome para facilitar.*           
@@ -58,6 +23,7 @@ Como requisito principal do teste, todas as propriedades pertencentes aos person
 | `Ravenclaw`  | `5a05da69d45bd0a11bd5e06f` |  
 
 **Se você tentar atualizar a propriedade `house` de um personagem com um valor diferente receberá uma mensagem de erro.**  
+
 
 ### Cache 
 Para este projeto foi utilizado o **Redis** para armazenar o cache durante as operações de `GET`. Já em outras operações como `DELETE` ou `PUT` o cache é eliminado até que uma nova operação `GET` seja realizada como em `/api/v1/personas`.   
@@ -77,6 +43,7 @@ Os principais `endpoints` da Api:
 ## Filtros
 É possível filtrar todos os personagens pelas suas respectivas casas através do `endpoint`:  
 * `GET` - `/api/v1/personas?house={houseId}`
+
 
 ## Operações do CRUD 
 
@@ -120,6 +87,46 @@ Para deletar um personagem específico você deve utilizar o endpoint `/api/v1/p
  
 ## Documentação Swagger
 Para acessar a documentação do Swagger utilize o endpoint `/swagger-ui.html`.
+
+## Build
+
+Você pode testar a API de duas formas:
+
+* Através do Heroku utilizando o Postman para realizar as requisições - **Recomendável**
+
+* Local via Docker seguindo as instruções da seção Docker neste documento.     
+
+Na primeira execução local o banco de dados estará vazio, portanto a primeira requisição ao endpoint `/api/v1/personas` retornará `204 - No Content`. Utilize o mesmo endpoint mas efetuando um `POST` para inserir qualquer personagem seguindo as orientações da seção [Operações do CRUD - Criar Personagem.](https://github.com/eduardowgmendes/makemagicapi#criar-um-personagem) 
+
+
+### Heroku 
+
+Apenas para testes o deploy foi realizado no Heroku que é uma plataforma em nuvem como um serviço *PaaS* que suporta várias linguagens de programação. *Nota Devido à notável lentidão da plataforma é recomendável acessar os endpoints abaixo utilizando do Postman.*   
+
+| Método  |  Link  |
+| ------------------- | ------------------- |
+|  `GET`  |  `https://makemagic-api.herokuapp.com/api/v1/personas` |
+|  `GET`  |  `https://makemagic-api.herokuapp.com/api/v1/personas{id}` |
+|  `POST`  |  `https://makemagic-api.herokuapp.com/api/v1/personas` |
+|  `PUT`  |  `https://makemagic-api.herokuapp.com/api/v1/personas/{id}` |
+|  `DELETE`  |  `https://makemagic-api.herokuapp.com/api/v1/personas/{id}` |
+
+
+#### Todos os Personagens 
+[https://makemagic-api.herokuapp.com/api/v1/personas](https://makemagic-api.herokuapp.com/api/v1/personas)
+
+#### Personagem por `id` 
+[https://makemagic-api.herokuapp.com/api/v1/personas/1](https://makemagic-api.herokuapp.com/api/v1/personas)
+
+#### Documentação Swagger 
+[https://makemagic-api.herokuapp.com/swagger-ui.html](https://makemagic-api.herokuapp.com/swagger-ui.html)
+
+*Nota: O `ClearDB` do Heroku, em seu plano gratuito, incrementa os ids das entidades de 10 em 10 portanto ao testar via Heroku você notará esse comportamento, como explicado nesse link: [https://w2.cleardb.net/faqs/#general_16](https://w2.cleardb.net/faqs/#general_16)*
+
+## Docker
+Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`. 
+
+*Nota: Se houver algum problema com o MySQL na hora de subir a aplicação Spring, apenas pare a operação do Docker utilizando o `CTRL+C` duas vezes e reinicie novamente com o mesmo comando: `sudo docker up --build`.*        
  
 ## Resumo das Tecnologias
 Abaixo segue uma lista resumida de tecnologias utilizadas na concepção desse projeto: 
