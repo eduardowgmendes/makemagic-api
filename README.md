@@ -29,18 +29,18 @@ Como requisito principal do teste, todas as propriedades pertencentes aos person
 ### Operações do CRUD 
 
 
-### Todos os Personagens  
-## GET - `/api/v1/personas`
+## Todos os Personagens  
+### GET - `/api/v1/personas`
 Para recuperar a lista completa de personagens utilize o endpoint `/api/v1/personas`. Se desejar filtrar os personagens pelas suas respectivas casas adicione como parâmetro a este endpoint `?house={houseId}` onde `houseId` pode ser uma das quatro casas mencionadas. Retorna `204 - No Content` se a lista estiver vazia ou o parâmetro for vazio como em `?house= `.  
 
-### Personagem por seu `id`  
-## GET - `/api/v1/personas/{id}`
+## Personagem por seu `id`  
+### GET - `/api/v1/personas/{id}`
 Para recuperar apenas um personagem utilize o endpoint `/api/v1/personas/{id}`, onde `id` é o id respectivo do personagem. 
 Retorna `404 - Not Found` se não houver um personagem com o `id` informado. 
 
 
-### Criar um Personagem  
-## POST - `/api/v1/personas`
+## Criar um Personagem  
+### POST - `/api/v1/personas`
 Para inserir um novo registro você deve utilizar o endpoint `/api/v1/personas`. É necessário passar no body da requisição os seguintes dados excluindo-se a propriedade id: 
 
 ```json
@@ -55,14 +55,14 @@ Para inserir um novo registro você deve utilizar o endpoint `/api/v1/personas`.
 
 Retorna `400 - Bad Request` com uma mensagem pertinente se a propriedade `house` for diferente de uma das quatro opções de casas mencionadas. 
 
-### Atualizar um Personagem  
-## PUT - `/api/v1/personas/{id}`
+## Atualizar um Personagem  
+### PUT - `/api/v1/personas/{id}`
 Para atualizar o registro de um personagem específico você deve utilizar o endpoint `/api/v1/personas/{id}`, onde a propriedade `id` é o id específico do personagem ao qual deseja-se atualizar. Pode-se modificar todas propriedades que considerar necessárias porém a propriedade `house` deve ser uma das quatro opções. 
 
 Retorna `400 - Bad Request` com uma mensagem pertinente se a propriedade `house` for diferente de uma das quatro opções de casas mencionadas.   
 
-### Deletar um Personagem  
-## DELETE - `/api/v1/personas/{id}`
+## Deletar um Personagem  
+### DELETE - `/api/v1/personas/{id}`
 Para deletar um personagem específico você deve utilizar o endpoint `/api/v1/personas/{id}`, onde a propriedade `id` é o id específico do personagem ao qual deseja-se deletar. Retorna `404 - Not Found` se não houver um personagem com o `id` informado.  
 
 ### Endpoints 
