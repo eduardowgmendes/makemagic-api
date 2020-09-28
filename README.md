@@ -5,16 +5,38 @@ Teste para uma entrevista de emprego de uma empresa de tecnologia. A tarefa era 
 
 Inteiramente concebido na linguagem Java utilizando o Spring e outras dependências como Spring Data com MySQL, Spring Cache utilizando o `Redis`. *Ao final haverá uma lista resumida de todas as tecnologias utilizadas nesse projeto.*      
 
-
-## Heroku 
-
-### Personas 
-[Personas!](https://makemagic-api.herokuapp.com/api/v1/personas)
-
-### Documentação Swagger 
-[Documentação Swagger!](https://makemagic-api.herokuapp.com/swagger-ui.html)
-
 ## Build
+
+Na primeira execução local o banco de dados estará vazio, portanto a primeira requisição ao endpoint `/api/v1/personas` retornará `204 - No Content`. Utilize o mesmo endpoint mas efetuando um `POST` para inserir qualquer personagem seguindo as orientações da seção [Operações do CRUD - Criar Personagem.](https://github.com/eduardowgmendes/makemagicapi#criar-um-personagem) 
+
+Você pode testar a API de duas formas:
+* Através do Heroku utilizando o Postman para realizar as requisições - Recomendável
+* Local via Docker seguindo as instruções da seção Docker neste documento.     
+
+### Heroku 
+
+Apenas para testes o deploy foi realizado no Heroku que é uma plataforma em nuvem como um serviço *PaaS* que suporta várias linguagens de programação. *Nota Devido à notável lentidão da plataforma é recomendável acessar os endpoints abaixo utilizando do Postman.*  
+
+| Método  |  Link  |
+| ------------------- | ------------------- |
+|  `GET`  |  `https://makemagic-api.herokuapp.com/api/v1/personas` |
+|  `GET`  |  `https://makemagic-api.herokuapp.com/api/v1/personas{id}` |
+|  `POST`  |  `https://makemagic-api.herokuapp.com/api/v1/personas` |
+|  `PUT`  |  `https://makemagic-api.herokuapp.com/api/v1/personas/{id}` |
+|  `DELETE`  |  `https://makemagic-api.herokuapp.com/api/v1/personas/{id}` |
+
+
+#### Todos os Personagens 
+[https://makemagic-api.herokuapp.com/api/v1/personas](https://makemagic-api.herokuapp.com/api/v1/personas)
+
+#### Personagem por `id` 
+[https://makemagic-api.herokuapp.com/api/v1/personas](https://makemagic-api.herokuapp.com/api/v1/personas)
+
+#### Documentação Swagger 
+[https://makemagic-api.herokuapp.com/swagger-ui.html](https://makemagic-api.herokuapp.com/swagger-ui.html)
+
+
+## Docker
 Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`. 
 
 *Nota: Se houver algum problema com o MySQL na hora de subir a aplicação Spring, apenas pare a operação do Docker utilizando o `CTRL+C` duas vezes e reinicie novamente com o mesmo comando: `sudo docker up --build`.*        
