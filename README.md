@@ -1,5 +1,4 @@
-## Make Magic API
-### A HarryPotter Universe Api
+# Make Magic API
   
 ### O Projeto 
 Teste para uma entrevista de emprego de uma empresa de tecnologia. A tarefa era criar uma API REST com operações de um CRUD para inserir, recuperar, atualizar e deletar personagens do universo de Hogwarts. A API deveria se integrar a outra API denominada **`Potter API`** para verificar durante as operações de `POST` e `PUT` se a casa inserida correspondia as casas de *Hogwarts* presentes na `Potter API`. Confesso que tive que assistir aos primeiros filmes para me inteirar sobre a história e entender de fato como tudo funcionaria. 
