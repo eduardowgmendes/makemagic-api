@@ -30,7 +30,7 @@ Apenas para testes o deploy foi realizado no Heroku que é uma plataforma em nuv
 [https://makemagic-api.herokuapp.com/api/v1/personas](https://makemagic-api.herokuapp.com/api/v1/personas)
 
 #### Personagem por `id` 
-[https://makemagic-api.herokuapp.com/api/v1/personas](https://makemagic-api.herokuapp.com/api/v1/personas)
+[https://makemagic-api.herokuapp.com/api/v1/personas/1](https://makemagic-api.herokuapp.com/api/v1/personas)
 
 #### Documentação Swagger 
 [https://makemagic-api.herokuapp.com/swagger-ui.html](https://makemagic-api.herokuapp.com/swagger-ui.html)
