@@ -47,7 +47,7 @@ public class PersonaService {
      *
      * @param id
      */
-    @Cacheable(value = "persona", key = "#root.method.name")
+    @Cacheable(value = "persona", key = "#id")
     public PersonaDTO findById(Long id) {
         return repository.findById(id)
                 .map(PersonaDTO::create)
