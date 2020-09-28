@@ -10,7 +10,17 @@ Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o coman
 
 ### Operações 
 
-## Create
+### GET - `/api/v1/personas`
+Para recuperar a lista completa de personagens utilize o endpoint `/api/v1/personas`. Se desejar filtrar os personagens pelas suas respectivas casas adicione como parâmetro a este endpoint `?house={houseId}` onde `houseId` é pode ser uma das quatro casas: 
+
+| Casa       | Id da Casa               |
+|------------|--------------------------|
+| Slytherin  | 5a05dc8cd45bd0a11bd5e071 |
+| Gryffindor | 5a05e2b252f721a3cf2ea33f |
+| Hufflepuff | 5a05dc58d45bd0a11bd5e070 |
+| Ravenclaw  | 5a05da69d45bd0a11bd5e06f |  
+
+
 ### POST - `/api/v1/personas`
 Para inserir um novo registro você deve utilizar o endpoint `/api/v1/personas`. É necessário passar no body da requisição os seguintes dados excluindo-se a propriedade id: 
 
