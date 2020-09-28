@@ -2,10 +2,12 @@
 ### A HarryPotter Universe Api
   
 ### O Projeto 
-Inteiramente concebido na linguagem Java utilzando o Spring e outras dependências como Spring Data e o Spring Cache.     
+Teste para uma entrevista de emprego de uma empresa de tecnologia. A tarefa era criar uma API REST com operações de um CRUD para inserir, recuperar, atualizar e deletar personagens do universo de Hogwarts. A API deveria se integrar a outra API denominada **`Potter API`** para verificar durante as operações de `POST` e `PUT` se a casa inserida correspondia as casas de *Hogwarts* presentes na `Potter API`. Confesso que tive que assistir aos primeiros filmes para me inteirar sobre a história e entender de fato como tudo funcionaria. 
+
+Inteiramente concebido na linguagem Java utilizando o Spring e outras dependências como Spring Data com MySQL, Spring Cache utilizando o `Redis`. *Ao final haverá uma lista resumida de todas as tecnologias utilizadas nesse projeto.*      
 
 
-## Build no Docker
+## Build
 Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`.   
 
 ## Overview 
@@ -24,6 +26,22 @@ Como requisito principal do teste, todas as propriedades pertencentes aos person
 | `Ravenclaw`  | `5a05da69d45bd0a11bd5e06f` |  
 
 **Se você tentar atualizar a propriedade `house` de um personagem com um valor diferente receberá uma mensagem de erro.**  
+
+## Endpoints 
+Os principais `endpoints` da Api:  
+
+| Método  |  Endpoint  |
+| ------------------- | ------------------- |
+|  `GET`  |  `/api/v1/personas` |
+|  `GET`  |  `/api/v1/personas{id}` |
+|  `POST`  |  `/api/v1/personas` |
+|  `PUT`  |  `/api/v1/personas/{id}` |
+|  `DELETE`  |  `/api/v1/personas/{id}` |
+
+
+## Filtros
+É possível filtrar todos os personagens pelas suas respectivas casas através do `endpoint`:  
+* `GET` - `/api/v1/personas?house={houseId}`
 
 ## Operações do CRUD 
 
@@ -63,27 +81,7 @@ Retorna `400 - Bad Request` com uma mensagem pertinente se a propriedade `house`
 
 ### Deletar um Personagem  
 #### DELETE - `/api/v1/personas/{id}`
-Para deletar um personagem específico você deve utilizar o endpoint `/api/v1/personas/{id}`, onde a propriedade `id` é o id específico do personagem ao qual deseja-se deletar. Retorna `404 - Not Found` se não houver um personagem com o `id` informado.  
-
-
-
-## Endpoints 
-Os principais `endpoints` da Api:  
-
-| Método  |  Endpoint  |
-| ------------------- | ------------------- |
-|  `GET`  |  `/api/v1/personas` |
-|  `GET`  |  `/api/v1/personas{id}` |
-|  `POST`  |  `/api/v1/personas` |
-|  `PUT`  |  `/api/v1/personas/{id}` |
-|  `DELETE`  |  `/api/v1/personas/{id}` |
-
-
-
-### Filtros
-É possível filtrar todos os personagens pelas suas respectivas casas através do `endpoint`:  
-* `GET` - `/api/v1/personas?house={houseId}`
-
+Para deletar um personagem específico você deve utilizar o endpoint `/api/v1/personas/{id}`, onde a propriedade `id` é o id específico do personagem ao qual deseja-se deletar. Retorna `404 - Not Found` se não houver um personagem com o `id` informado
  
 ### Resumo das Tecnologias
 Abaixo segue uma lista resumida de tecnologias utilizadas na concepção desse projeto: 
