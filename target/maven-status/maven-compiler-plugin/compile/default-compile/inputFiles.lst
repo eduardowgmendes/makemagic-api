@@ -1,0 +1,17 @@
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/controllers/house/RetrofitService.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/controllers/persona/PersonaController.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/entities/House.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/entities/Persona.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/exceptions/PropertyMismatchException.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/entities/datatransferobject/PersonaDTO.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/entities/datatransferobject/HouseDTO.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/exceptions/ObjectNotFoundException.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/controllers/persona/PersonaService.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/utils/URIUtils.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/controllers/filter/PersonaSpecs.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/MakemagicApplication.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/controllers/house/HouseService.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/controllers/persona/PersonaRepository.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/configuration/ExceptionHandling.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/configuration/SwaggerConfig.java
+/home/eduardomendes/CoolStuffs/projects/web-projects/makemagicapi/src/main/java/br/com/edu/makemagic/api/domain/controllers/house/HouseRepository.java
