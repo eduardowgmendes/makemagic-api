@@ -3,7 +3,7 @@ services:
   makemagicapi:
     build:
       context: ./
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
     image: makemagic/api
     ports:
       - '8080:8080'
@@ -28,7 +28,7 @@ services:
   redis:
     image: redis:6.0.8
     ports:
-      - '6379:6379'
+      - '6381:6381'
     volumes:
       - ./docker/volume_redis:/data
     command: redis-server --appendonly yes

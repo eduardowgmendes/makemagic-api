@@ -19,7 +19,7 @@ public class PersonaController {
     @Autowired
     private PersonaService service;
 
-    @ApiOperation(value = "List all Personas. Can make query of houses with house parameter")
+    @ApiOperation(value = "List all Personas. Can make query of houses with house parameter like: /api/v1/personas?house=5a05e2b252f721a3cf2ea33f")
     @GetMapping
     public ResponseEntity<List<PersonaDTO>> allPersonas(@RequestParam(required = false) String house) {
         List<PersonaDTO> personas = service.findAll(house);
