@@ -9,10 +9,10 @@ Inteiramente concebido na linguagem Java utilizando o Spring e outras dependênc
 ## Heroku 
 
 ### Personas 
-!()[https://makemagic-api.herokuapp.com/api/v1/personas]
+![](https://makemagic-api.herokuapp.com/api/v1/personas)
 
 ### Documentação Swagger 
-!()[https://makemagic-api.herokuapp.com/swagger-ui.html]
+![](https://makemagic-api.herokuapp.com/swagger-ui.html)
 
 ## Build
 Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`. 
