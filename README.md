@@ -9,7 +9,7 @@ Inteiramente concebido na linguagem Java utilizando o Spring e outras dependênc
 ## Build
 Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`.   
 
-## Overview 
+## Visão Geral
 
 ### `Persona` != `Character`
 Decidi ao implementar a solução, optar por um nome de entidade diferente da recomendada pelo teste. Isso se deu ao fato de eu me familiarizar melhor com o nome **Persona** do que **Character** visto que no Java `java.lang.Character` é uma das classes Wrapper que compõem a linguagem em si. *Isso não foi um problema no geral, mas resolvi utilizar outro nome para facilitar.*           
@@ -25,6 +25,9 @@ Como requisito principal do teste, todas as propriedades pertencentes aos person
 | `Ravenclaw`  | `5a05da69d45bd0a11bd5e06f` |  
 
 **Se você tentar atualizar a propriedade `house` de um personagem com um valor diferente receberá uma mensagem de erro.**  
+
+### Cache 
+Para este projeto foi utilizado o **Redis** para armazenar o cache durante as operações de `GET`. Já em outras operações como `DELETE` ou `PUT` o cache é eliminado até que uma nova operação `GET` seja realizada como em `/api/v1/personas`.   
 
 ## Endpoints 
 Os principais `endpoints` da Api:  
@@ -86,7 +89,7 @@ Para deletar um personagem específico você deve utilizar o endpoint `/api/v1/p
 Abaixo segue uma lista resumida de tecnologias utilizadas na concepção desse projeto: 
 * Docker
 * Maven 3.6.3 
-* Redis for Caching
+* Redis
 * Swagger2   
 * Spring Data JPA MySQL  
 * Retrofit 2.3.0    
