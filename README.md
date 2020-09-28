@@ -92,9 +92,9 @@ Para acessar a documentação do Swagger utilize o endpoint `/swagger-ui.html`.
 
 Você pode testar a API de duas formas:
 
-* Através do Heroku utilizando o Postman para realizar as requisições - **Recomendável**
+* Através do Heroku utilizando o Postman para realizar as requisições
 
-* Local via Docker seguindo as instruções da seção Docker neste documento.     
+* Local via Docker seguindo as instruções da seção [Docker](https://github.com/eduardowgmendes/makemagicapi#docker) neste documento.     
 
 Na primeira execução local o banco de dados estará vazio, portanto a primeira requisição ao endpoint `/api/v1/personas` retornará `204 - No Content`. Utilize o mesmo endpoint mas efetuando um `POST` para inserir qualquer personagem seguindo as orientações da seção [Operações do CRUD - Criar Personagem.](https://github.com/eduardowgmendes/makemagicapi#criar-um-personagem) 
 
