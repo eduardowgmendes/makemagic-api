@@ -5,6 +5,9 @@
 Inteiramente inteiro foi concebido na linguagem Java utilzando o Spring e outras dependências como Spring Data e o Spring Cache.     
 
 
+## Build no Docker
+Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`.   
+
 ### Endpoints 
 Os principais `endpoints` da Api:  
 
