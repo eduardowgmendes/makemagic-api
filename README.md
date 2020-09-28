@@ -26,7 +26,7 @@ Como requisito principal do teste, todas as propriedades pertencentes aos person
 
 
 ### Cache 
-Para este projeto foi utilizado o **Redis** para armazenar o cache durante as operações de `GET`. Já em outras operações como `DELETE` ou `PUT` o cache é eliminado até que uma nova operação `GET` seja realizada como em `/api/v1/personas`.   
+Para este projeto foi utilizado o **Redis** para armazenar o cache durante as operações de `GET` que são mais custosas ao banco de dados como por exemplo, a listagem de todos os personagens.    
 
 ## Endpoints 
 Os principais `endpoints` da Api:  
