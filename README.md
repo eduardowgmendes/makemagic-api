@@ -6,6 +6,14 @@ Teste para uma entrevista de emprego de uma empresa de tecnologia. A tarefa era 
 Inteiramente concebido na linguagem Java utilizando o Spring e outras dependências como Spring Data com MySQL, Spring Cache utilizando o `Redis`. *Ao final haverá uma lista resumida de todas as tecnologias utilizadas nesse projeto.*      
 
 
+## Heroku 
+
+### Personas 
+!()[https://makemagic-api.herokuapp.com/api/v1/personas]
+
+### Documentação Swagger 
+!()[https://makemagic-api.herokuapp.com/swagger-ui.html]
+
 ## Build
 Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`. 
 
