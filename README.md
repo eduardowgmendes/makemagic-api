@@ -87,6 +87,9 @@ Retorna `400 - Bad Request` com uma mensagem pertinente se a propriedade `house`
 #### DELETE - `/api/v1/personas/{id}`
 Para deletar um personagem específico você deve utilizar o endpoint `/api/v1/personas/{id}`, onde a propriedade `id` é o id específico do personagem ao qual deseja-se deletar. Retorna `404 - Not Found` se não houver um personagem com o `id` informado
  
+## Documentação Swagger
+Para acessar a documentação do Swagger utilize o endpoint `/swagger-ui.html`.
+ 
 ### Resumo das Tecnologias
 Abaixo segue uma lista resumida de tecnologias utilizadas na concepção desse projeto: 
 * Docker
