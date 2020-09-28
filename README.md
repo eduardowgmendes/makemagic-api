@@ -90,7 +90,7 @@ Para deletar um personagem específico você deve utilizar o endpoint `/api/v1/p
 ## Documentação Swagger
 Para acessar a documentação do Swagger utilize o endpoint `/swagger-ui.html`.
  
-### Resumo das Tecnologias
+## Resumo das Tecnologias
 Abaixo segue uma lista resumida de tecnologias utilizadas na concepção desse projeto: 
 * Docker
 * Maven 3.6.3 
