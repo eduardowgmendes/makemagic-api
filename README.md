@@ -15,7 +15,7 @@ Você pode testar a API de duas formas:
 
 ### Heroku 
 
-Apenas para testes o deploy foi realizado no Heroku que é uma plataforma em nuvem como um serviço *PaaS* que suporta várias linguagens de programação. *Nota Devido à notável lentidão da plataforma é recomendável acessar os endpoints abaixo utilizando do Postman.*  
+Apenas para testes o deploy foi realizado no Heroku que é uma plataforma em nuvem como um serviço *PaaS* que suporta várias linguagens de programação. *Nota Devido à notável lentidão da plataforma é recomendável acessar os endpoints abaixo utilizando do Postman.*   
 
 | Método  |  Link  |
 | ------------------- | ------------------- |
@@ -35,6 +35,7 @@ Apenas para testes o deploy foi realizado no Heroku que é uma plataforma em nuv
 #### Documentação Swagger 
 [https://makemagic-api.herokuapp.com/swagger-ui.html](https://makemagic-api.herokuapp.com/swagger-ui.html)
 
+*Nota: O `ClearDB` do Heroku, em seu plano gratuito, incrementa os ids das entidades de 10 em 10 portanto ao testar via Heroku você notará esse comportamento, como explicado nesse link: [https://w2.cleardb.net/faqs/#general_16](https://w2.cleardb.net/faqs/#general_16)*
 
 ## Docker
 Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`. 
