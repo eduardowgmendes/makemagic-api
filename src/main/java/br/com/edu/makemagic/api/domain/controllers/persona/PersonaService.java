@@ -34,7 +34,7 @@ public class PersonaService {
      *
      * @param house
      */
-    @Caching(evict = {@CacheEvict(value = "persona", allEntries = true, condition = "#house != null && not #house.isEmpty() && not #house.isBlank()", beforeInvocation = true)}, cacheable = {@Cacheable(value = "persona", condition = "#house == null", key = "#root.method.name")})
+    @Caching(evict = {@CacheEvict(value = "persona", allEntries = true, condition = "#house != null && not #house.isEmpty()", beforeInvocation = true)}, cacheable = {@Cacheable(value = "persona", condition = "#house == null", key = "#root.method.name")})
     public List<PersonaDTO> findAll(String house) {
         return repository.findAll(new PersonaSpecs(new Persona(house)))
                 .stream()
