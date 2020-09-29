@@ -44,7 +44,7 @@ Apenas para testes o deploy foi realizado no Heroku que é uma plataforma em nuv
 ## Docker
 Abra o terminal na raiz do projeto no diretório `makemagicapi` e digite o comando: `sudo docker up --build`. 
 
-*Nota: Se houver algum problema com o MySQL na hora de subir a aplicação Spring, apenas pare a operação do Docker utilizando o `CTRL+C` duas vezes e reinicie novamente com o mesmo comando: `sudo docker up --build`.*        
+*Nota: Se houver algum problema com o MySQL na hora de subir a aplicação Spring, apenas pare a operação do Docker utilizando o `CTRL+C` duas vezes e reinicie novamente com os comandos: `sudo chmod -R 777 docker` no diretório raiz `/makemagicapi` da aplicação e logo após `sudo docker up --build`.*        
 
 
 ## Visão Geral
